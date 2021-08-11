@@ -58,19 +58,17 @@
         <v-row>
           <v-col>
             <v-btn
-            text
-            depressed
-            link
-            nuxt
-            tile            
+            text                                                            
+            nuxt              
+            x-large          
+            fixed
             to="/"
-            class="text-h1 mt-4"              
-              fixed
-              style="text-transform: none; right: 260px; top: 25px"
+            id="home-btn"            
+            class="text-h1 mt-2 pr-0"                          
               >
-              Silvia Righetti   
+              <span v-if="this.$vuetify.breakpoint.mdAndUp">Silvia Righetti</span>              
               <v-img
-                  style="position: fixed; right: 100px; top: 25px"
+                  style="position: fixed; right: 80px; top: 25px"
                   src="/sLogo.png"
                   max-height="280"
                   max-width="150"
@@ -143,6 +141,17 @@ export default {
 </script>
 
 <style lang="scss">
+#home-btn {
+  text-transform: none; 
+  right: 260px; 
+  top: 25px; 
+  height: inherit;
+}
+
+#home-btn::before{
+  display: none;
+}
+
 .navigation-item-title {
   writing-mode: vertical-lr;
 }
