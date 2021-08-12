@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Silvia Font';
+    src: url('~assets/fonts/FONTSILVIA.otf') format('opentype');
+  }
+
+@font-face {
+    font-family: 'Silvia Font';    
+    font-weight: bold;
+    src: url('~assets/fonts/FONTSILVIABOLD.otf') format('opentype');
+  }
+
 .about {
     background-color: #F44336 !important;    
 }

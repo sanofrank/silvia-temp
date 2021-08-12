@@ -12,10 +12,12 @@
           exact
         >
           <v-list-item-content>
-            <v-list-item-title
-              v-text="item.title"              
-              class="navigation-item-title text-h3"
-            />
+            <v-list-item-title             
+              class="navigation-item-title"
+            >
+            {{ item.title.toUpperCase() }}
+            </v-list-item-title>
+
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -64,7 +66,7 @@
             fixed
             to="/"
             id="home-btn"            
-            class="text-h1 mt-2 pr-0"                          
+            class="text-h2 mt-10 pr-0"                          
               >
               <span v-if="this.$vuetify.breakpoint.mdAndUp">Silvia Righetti</span>              
               <v-img
@@ -141,9 +143,14 @@ export default {
 </script>
 
 <style lang="scss">
+#navigation-drawer {
+  font-family: "Silvia Font" !important;  
+}
+
 #home-btn {
-  text-transform: none; 
-  right: 260px; 
+  font-family: "Silvia Font" !important;  
+  font-weight: normal;  
+  right: 240px; 
   top: 25px; 
   height: inherit;
 }
@@ -153,6 +160,9 @@ export default {
 }
 
 .navigation-item-title {
+  font-family: "Silvia Font" !important;  
+  font-weight: bold;
+  font-size: 290% !important;
   writing-mode: vertical-lr;
 }
 </style>

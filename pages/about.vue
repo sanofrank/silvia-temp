@@ -1,6 +1,8 @@
 <template>
   <v-row class="mt-4">
-    <v-col cols="12" class="text-h1"> ABOUT </v-col>
+    <v-col cols="12">
+      <Title :title="title" :classes="'text-h1'"/>
+    </v-col>
     <v-col md="8" cols="12" class="text-h5">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et est enim.
@@ -30,6 +32,11 @@
 
 <script>
 export default {
+    data() {
+      return {
+        title: 'About',        
+      }
+    },
     mounted(){
         console.log('about')
         return this.$vuetify.theme.about = true
