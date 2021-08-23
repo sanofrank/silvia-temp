@@ -1,5 +1,5 @@
 <template>
-    <div id="title" :class="classes">
+    <div :class="classes"> <!--id="title" -->
         {{ title.toUpperCase() }}
     </div>
 </template>
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    #title {
-        font-family: "Silvia Font" !important;
-    }
+    // #title {
+    //     font-family: "Silvia Font" !important;
+    // }
 </style>

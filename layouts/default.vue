@@ -66,13 +66,13 @@
             fixed
             to="/"
             id="home-btn"            
-            class="text-h2 mt-10 pr-0"                          
+            class="text-h3 mt-10 pr-0"                          
               >
-              <span v-if="this.$vuetify.breakpoint.mdAndUp">Silvia Righetti</span>              
+              <span v-if="this.$route.name === 'index'">Silvia Righetti</span>              
               <v-img
                   style="position: fixed; right: 80px; top: 25px"
-                  src="/sLogo.png"
-                  max-height="280"
+                  src="/pieno.png"
+                  max-height="300"
                   max-width="150"
                 ></v-img>                                                                                               
             </v-btn>                                               
@@ -112,25 +112,25 @@ export default {
           icon: "mdi-apps",
           title: "Work",
           to: "/work",
-          color: "green",
+          color: "work",
         },
         {
           icon: "mdi-apps",
           title: "Personal",
           to: "/personal",
-          color: "yellow",
+          color: "personal",
         },
         {
           icon: "mdi-apps",
           title: "About",
           to: "/about",
-          color: "red",
+          color: "about",
         },
         {
           icon: "mdi-apps",
           title: "Contact",
           to: "/contact",
-          color: "blue",
+          color: "contact",
         },
       ],
       miniVariant: false,
@@ -144,11 +144,11 @@ export default {
 
 <style lang="scss">
 #navigation-drawer {
-  font-family: "Silvia Font" !important;  
+  //font-family: "Silvia Font" !important;  
 }
 
 #home-btn {
-  font-family: "Silvia Font" !important;  
+  //font-family: "Silvia Font" !important;  
   font-weight: normal;  
   right: 240px; 
   top: 25px; 
@@ -160,9 +160,9 @@ export default {
 }
 
 .navigation-item-title {
-  font-family: "Silvia Font" !important;  
+  //font-family: "Silvia Font" !important;  
   font-weight: bold;
-  font-size: 290% !important;
+  font-size: 195% !important;
   writing-mode: vertical-lr;
 }
 </style>

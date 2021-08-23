@@ -1,4 +1,9 @@
 @font-face {
+  font-family: 'Gilroy';
+  src: url('~assets/fonts/Gilroy-ExtraBold.otf') format('opentype');
+}
+
+@font-face {
     font-family: 'Silvia Font';
     src: url('~assets/fonts/FONTSILVIA.otf') format('opentype');
   }
@@ -9,12 +14,24 @@
     src: url('~assets/fonts/FONTSILVIABOLD.otf') format('opentype');
   }
 
+.text-h1 {
+  font-family: 'Gilroy' !important;
+}  
+
+.body {
+  font-size: 24px;
+}
+
+.index{
+  background-color: #ffebe5 !important;
+}  
+
 .about {
-    background-color: #F44336 !important;    
+    background-color: #f22222 !important;    
 }
 
 .contact {
-    background-color: #2196F3 !important;    
+    background-color: #2231f2 !important;    
 }
 
 .navigation-item-active .navigation-item-title{

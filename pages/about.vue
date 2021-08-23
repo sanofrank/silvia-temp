@@ -3,7 +3,7 @@
     <v-col cols="12">
       <Title :title="title" :classes="'text-h1'"/>
     </v-col>
-    <v-col md="8" cols="12" class="text-h5">
+    <v-col md="8" cols="12" class="body">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et est enim.
         Donec elementum risus mollis sagittis viverra. Vivamus efficitur

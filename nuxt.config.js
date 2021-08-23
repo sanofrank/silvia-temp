@@ -19,7 +19,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/sIcon.ico' },
-      //{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Oswald|Libre+Baskerville&display=swap' }              
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Oswald|Libre+Baskerville&display=swap' }
     ]
   },
 
@@ -58,6 +58,12 @@ export default {
     theme: {
       dark: false,
       themes: {
+        light: {
+          about: '#f22222',          
+          work: '#26a301',
+          personal: '#ecad00',          
+          contact: '#2231f2'
+        },
         dark: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,
