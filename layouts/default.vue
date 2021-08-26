@@ -59,6 +59,7 @@
       <v-container>
         <v-row>
           <v-col>
+            <v-hover v-slot="{ hover }">
             <v-btn
             text                                                            
             nuxt              
@@ -66,16 +67,18 @@
             fixed
             to="/"
             id="home-btn"            
+            :class="hover ? 'disco-title' : ''"
             class="text-h3 mt-10 pr-0"                          
               >
-              <span v-if="this.$route.name === 'index'">Silvia Righetti</span>              
-              <v-img
+              <span v-if="$route.name === 'index'">Silvia Righetti</span>              
+                <v-img
                   style="position: fixed; right: 80px; top: 25px"
-                  src="/pieno.png"
+                  :src="hover ? '/gallinaDance.GIF' : '/gallina.png'"
                   max-height="300"
                   max-width="150"
                 ></v-img>                                                                                               
             </v-btn>                                               
+            </v-hover>              
           </v-col>          
         </v-row>
         <Nuxt />
@@ -143,6 +146,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/assets/scss/animations.scss';
+
 #navigation-drawer {
   //font-family: "Silvia Font" !important;  
 }
@@ -164,5 +169,12 @@ export default {
   font-weight: bold;
   font-size: 195% !important;
   writing-mode: vertical-lr;
+}
+
+.disco-title:hover {
+-webkit-animation:rainbow 3s infinite;
+-ms-animation:rainbow 3s infinite;
+-o-animation:rainbow 3s infinite;
+animation:rainbow 3s ease-in infinite;    
 }
 </style>

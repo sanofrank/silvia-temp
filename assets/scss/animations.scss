@@ -1,0 +1,52 @@
+@keyframes rainbow {
+    0% {color: $work-color;}
+    10% {color: $personal-color;}
+    20% {color: $contact-color;}
+    30% {color: $about-color;}
+    40% {color: $contact-color;}
+    50% {color: $personal-color;}
+    60% {color: $work-color;}
+    70% {color: $personal-color;}
+    80% {color: $about-color;}
+    90% {color: $contact-color;}
+    100% {color: $about-color;}
+    }
+    @-webkit-keyframes rainbow {
+    0% {color: #fbd504;}
+    10% {color: #b97ad1;}
+    20% {color: #f73a2f;}
+    30% {color: #0056aa;}
+    40% {color: #f38f5a;}
+    50% {color: #519c86;}
+    60% {color: #f38f5a;}
+    70% {color: #0056aa;}
+    80% {color: #f73a2f;}
+    90% {color: #b97ad1;}
+    100% {color: #fbd504;}
+    }
+    @-ms-keyframes rainbow {
+    0% {color: #fbd504;}
+    10% {color: #b97ad1;}
+    20% {color: #f73a2f;}
+    30% {color: #0056aa;}
+    40% {color: #f38f5a;}
+    50% {color: #519c86;}
+    60% {color: #f38f5a;}
+    70% {color: #0056aa;}
+    80% {color: #f73a2f;}
+    90% {color: #b97ad1;}
+    100% {color: #fbd504;}
+    }
+    @-o-keyframes rainbow {
+    0% {color: #fbd504;}
+    10% {color: #b97ad1;}
+    20% {color: #f73a2f;}
+    30% {color: #0056aa;}
+    40% {color: #f38f5a;}
+    50% {color: #519c86;}
+    60% {color: #f38f5a;}
+    70% {color: #0056aa;}
+    80% {color: #f73a2f;}
+    90% {color: #b97ad1;}
+    100% {color: #fbd504;}
+    }

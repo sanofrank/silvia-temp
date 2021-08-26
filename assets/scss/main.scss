@@ -27,11 +27,11 @@
 }  
 
 .about {
-    background-color: #f22222 !important;    
+    background-color: $about-color !important;    
 }
 
 .contact {
-    background-color: #2231f2 !important;    
+    background-color: $contact-color !important;    
 }
 
 .navigation-item-active .navigation-item-title{

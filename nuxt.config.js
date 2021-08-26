@@ -59,9 +59,9 @@ export default {
       dark: false,
       themes: {
         light: {
-          about: '#f22222',          
           work: '#26a301',
           personal: '#ecad00',          
+          about: '#f22222',          
           contact: '#2231f2'
         },
         dark: {
