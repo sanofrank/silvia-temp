@@ -1,23 +1,27 @@
 <template>
   <v-app :class="this.$route.name">
-    <v-navigation-drawer :class="this.$route.name" fixed floating app width="100">
+    <v-navigation-drawer
+      :class="this.$route.name"
+      fixed
+      floating
+      app
+      width="100"
+    >
       <v-list flat class="mt-6">
-        <v-list-item          
+        <v-list-item
           v-for="(item, i) in items"
           :key="i"
           :to="item.to"
           active-class="white--text navigation-item-active"
           :class="`${item.color}--text`"
+          :ripple="false" 
           router
           exact
         >
           <v-list-item-content>
-            <v-list-item-title             
-              class="navigation-item-title"
-            >
-            {{ item.title.toUpperCase() }}
+            <v-list-item-title class="navigation-item-title">
+              {{ item.title.toUpperCase() }}
             </v-list-item-title>
-
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -58,28 +62,29 @@
     <v-main>
       <v-container>
         <v-row>
-          <v-col>
+          <v-col>            
             <v-hover v-slot="{ hover }">
-            <v-btn
-            text                                                            
-            nuxt              
-            x-large          
-            fixed
-            to="/"
-            id="home-btn"            
-            :class="hover ? 'disco-title' : ''"
-            class="text-h3 mt-10 pr-0"                          
+              <v-btn
+                :ripple="false" 
+                text
+                nuxt
+                x-large
+                fixed                
+                to="/"
+                id="home-btn"
+                :class="hover ? 'disco-title' : ''"
+                class="text-h3 mt-10 pr-0"
               >
-              <span v-if="$route.name === 'index'">Silvia Righetti</span>              
+                <span v-if="$route.name === 'index'">Silvia Righetti</span>
                 <v-img
                   style="position: fixed; right: 80px; top: 25px"
-                  :src="hover ? '/gallinaDance.GIF' : '/gallina.png'"
+                  :src="hover ? '/gallinaDance.gif'+ '?a='+Math.random() : '/gallina.gif'"
                   max-height="300"
                   max-width="150"
-                ></v-img>                                                                                               
-            </v-btn>                                               
-            </v-hover>              
-          </v-col>          
+                ></v-img>
+              </v-btn>
+            </v-hover>
+          </v-col>
         </v-row>
         <Nuxt />
       </v-container>
@@ -146,35 +151,42 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/animations.scss';
+@import "@/assets/scss/animations.scss";
 
 #navigation-drawer {
-  //font-family: "Silvia Font" !important;  
+  //font-family: "Silvia Font" !important;
 }
 
 #home-btn {
-  //font-family: "Silvia Font" !important;  
-  font-weight: normal;  
-  right: 240px; 
-  top: 25px; 
+  //font-family: "Silvia Font" !important;
+  font-weight: normal;
+  right: 240px;
+  top: 25px;
   height: inherit;
 }
 
-#home-btn::before{
+#home-btn:before {
+  color: blue !important;
   display: none;
 }
 
 .navigation-item-title {
-  //font-family: "Silvia Font" !important;  
+  //font-family: "Silvia Font" !important;
+  margin-left: 0.4em;
   font-weight: bold;
   font-size: 195% !important;
-  writing-mode: vertical-lr;
+  writing-mode: vertical-rl;
+  -moz-transform: scale(-1, -1);
+  -webkit-transform: scale(-1, -1);
+  -o-transform: scale(-1, -1);
+  -ms-transform: scale(-1, -1);
+  transform: scale(-1, -1);
 }
 
 .disco-title:hover {
--webkit-animation:rainbow 3s infinite;
--ms-animation:rainbow 3s infinite;
--o-animation:rainbow 3s infinite;
-animation:rainbow 3s ease-in infinite;    
+  -webkit-animation: rainbow 3s infinite;
+  -ms-animation: rainbow 3s infinite;
+  -o-animation: rainbow 3s infinite;
+  animation: rainbow 3s ease-in infinite;
 }
 </style>

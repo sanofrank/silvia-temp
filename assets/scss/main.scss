@@ -19,11 +19,15 @@
 }  
 
 .body {
-  font-size: 24px;
+  font-size: 24px;  
+}
+
+.body-main {
+  font-size: 32px;
 }
 
 .index{
-  background-color: #ffebe5 !important;
+  background-color: $index-color !important;
 }  
 
 .about {

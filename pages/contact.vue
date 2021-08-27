@@ -3,8 +3,8 @@
     <v-col cols="12">
       <Title :title="title" :classes="'text-h1'" />
     </v-col>
-    <v-col cols="12" class="body">      
-        <div style="height: 60vh" class="d-flex align-center">
+    <v-col cols="12" class="body-main">      
+        <div style="height: 70vh" class="d-flex align-center">
             <ul>
           <li>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et est
