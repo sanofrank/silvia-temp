@@ -1,6 +1,6 @@
 <template>
   <v-app :class="this.$route.name">
-    <v-navigation-drawer
+    <v-navigation-drawer      
       :class="this.$route.name"
       fixed
       floating
@@ -9,7 +9,7 @@
     >
       <v-list flat class="mt-6">
         <v-list-item
-          v-for="(item, i) in items"
+          v-for="(item, i) in items"          
           :key="i"
           :to="item.to"
           active-class="white--text navigation-item-active"
@@ -25,7 +25,61 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer>        
+    <v-dialog
+      v-if="$vuetify.breakpoint.mdAndDown"
+      v-model="dialog"
+      fullscreen
+      hide-overlay
+      transition="dialog-bottom-transition"
+    >
+    <template v-slot:activator="{ on, attrs }">
+    <div style="background-color: #7b1fa2; position:fixed; width:100%; left: 0; bottom: 0; z-index:1">            
+      <v-btn class="text-h4" block text x-large v-bind="attrs" v-on="on">
+        MENU
+      </v-btn>          
+    </div>      
+    </template>
+     <div style="width: 100%; height: 100%; background-color: #7b1fa2" class="d-flex justify-center align-center">
+       <v-list class="mt-6 text-center" style="background-color: #7b1fa2">
+         <v-list-item          
+          to="/"                
+          :ripple="false" 
+          active-class="white--text navigation-item-active"
+          @click="dialog = false"
+          router
+          exact
+        >
+          <v-list-item-content>
+            <v-list-item-title class="bottom-navigation-item">
+              HOME
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item
+          v-for="(item, i) in items"
+          :key="i"
+          :to="item.to"                
+          :ripple="false" 
+          active-class="white--text navigation-item-active"
+          @click="dialog = false"
+          router
+          exact
+        >
+          <v-list-item-content>
+            <v-list-item-title class="bottom-navigation-item">
+              {{ item.title.toUpperCase() }}
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    <div style="background-color: #7b1fa2; position:fixed; width:100%; left: 0; bottom: 0; z-index:1">            
+      <v-btn class="text-h4" block text x-large @click="dialog = false">
+        CLOSE
+      </v-btn>          
+    </div> 
+     </div>
+    </v-dialog>
     <!-- <v-app-bar
       :clipped-left="clipped"
       fixed
@@ -112,6 +166,7 @@
 export default {
   data() {
     return {
+      dialog: false,
       clipped: false,
       drawer: false,
       fixed: false,
@@ -168,6 +223,16 @@ export default {
 #home-btn:before {
   color: blue !important;
   display: none;
+}
+
+.bottom-navigation-title{
+  font-weight: bold;
+  font-size: 195% !important;
+}
+
+.bottom-navigation-item {
+  font-weight: bold;
+  font-size: 195% !important;
 }
 
 .navigation-item-title {

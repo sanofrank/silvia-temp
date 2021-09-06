@@ -59,10 +59,12 @@ export default {
       dark: false,
       themes: {
         light: {
+          index: '#eee5de',
           work: '#26a301',
           personal: '#ecad00',          
           about: '#f22222',          
-          contact: '#2231f2'
+          contact: '#2231f2',
+          bottom_navigation: "#8e24aa"
         },
         dark: {
           primary: colors.blue.darken2,
@@ -71,7 +73,7 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+          success: colors.green.accent3          
         },
       }
     }
