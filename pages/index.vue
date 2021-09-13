@@ -3,10 +3,10 @@
     <v-col cols="12" id="head">     
     </v-col>
     <template>
-        <v-col md="4" cols="12" class="col-post" v-for="post in posts" :key="post.id">
-          <div class="post d-flex align-center justify-center" :class="post.type">
+        <v-col sm="6" lg="4" cols="12" class="col-post" v-for="post in posts" :key="post.id">
+          <v-sheet class="post d-flex align-center justify-center" :class="post.type" elevation="2">
             {{ post.title + post.id }}
-          </div>
+          </v-sheet>
         </v-col>
     </template>
   </v-row>

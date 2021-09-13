@@ -1,6 +1,7 @@
 <template>
   <v-app :class="this.$route.name">
     <v-navigation-drawer      
+      v-if="$vuetify.breakpoint.smAndUp"
       :class="this.$route.name"
       fixed
       floating
@@ -27,7 +28,7 @@
       </v-list>
     </v-navigation-drawer>        
     <v-dialog
-      v-if="$vuetify.breakpoint.mdAndDown"
+      v-if="$vuetify.breakpoint.smAndDown"
       v-model="dialog"
       fullscreen
       hide-overlay
